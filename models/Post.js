@@ -11,16 +11,10 @@ const PostSchema = mongoose.Schema({
         type: String,
         required: true
     },
-    data: {
+    date: {
         type: Date,
         default: Date.now
     },
 })
 
-const UserSchema = mongoose.Schema({
-    username: String,
-    password: String,
-})
-
 module.exports = mongoose.model('Posts', PostSchema)
-module.exports = mongoose.model('Users', UserSchema)
